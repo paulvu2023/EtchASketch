@@ -1,6 +1,6 @@
 const pixels = document.querySelectorAll('.pixel');
 pixels.forEach((pixel) => {
-    pixel.addEventListener('click', () => {
+    pixel.addEventListener('mouseover', () => {
         pixel.style.backgroundColor='black';
     })
 });
