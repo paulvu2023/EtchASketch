@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .grid-container {
@@ -28,6 +29,7 @@ body {
     justify-content: center;
     font-size: 5vw;
     margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 .row-container {
