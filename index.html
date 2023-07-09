@@ -8,11 +8,15 @@
     </head>
     <body>
         <div class="header">Etch A Sketch!</div>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
+        <div class="containerofslidecontainer">
+            <div class="slider-value"></div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
+            </div>
         </div>
-        <button class="clear-button">Clear</button>
-        <div class="slider-value"></div>
+        <div class="buttonbar">
+            <button class="clear-button">Clear</button>
+        </div>
         <div class="main-container">
             <div class="grid"></div>
         </div>

@@ -3,9 +3,9 @@ let n = 16;
 updateGrid();
 var slider = document.getElementById("myRange");
 var slidervalue = document.querySelector('.slider-value');
-slidervalue.textContent = slider.value;
-slider.onchange = () => {
-    slidervalue.textContent = slider.value;
+slidervalue.textContent = '16 x 16';
+slider.oninput = () => {
+    slidervalue.textContent = `${slider.value} x ${slider.value}`;
     n = slider.value;
     updateGrid();
 }
@@ -30,7 +30,7 @@ function makeResponsive () {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach((pixel) => {
         pixel.addEventListener('mouseover', () => {
-            pixel.style.backgroundColor='black';
+            pixel.style.backgroundColor='pink';
         })
     });
 }
