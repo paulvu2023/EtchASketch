@@ -15,12 +15,25 @@ body {
   flex: 1;
 }
 
-.grid-container {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.big-square {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 30vw;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.pixel {
+  display: flex;
+  flex: 1;
+  outline: 1px solid;
+  margin-top: 1px;
+  margin-left: 1px;
 }
 
 .header {
@@ -30,25 +43,6 @@ body {
     margin-top: 3vw;
     margin-bottom: 3vw;
 }
-
-.row-container {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-}
-
-.pixel {
-    background-color: red;
-    width: 50px;
-    height: 50px;
-    outline: 1px solid;
-    outline-color:lightgray;
-    margin-top: 1px;
-    margin-left: 1px;
-}
-
-
-
 
 /* slider css */
 
