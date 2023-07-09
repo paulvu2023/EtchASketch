@@ -15,7 +15,7 @@ body {
   flex: 1;
 }
 
-.big-square {
+.grid {
   background-color: red;
   display: flex;
   flex-direction: column;

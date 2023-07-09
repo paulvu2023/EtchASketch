@@ -1,8 +1,8 @@
-const grid = document.querySelector('.grid-container');
-let n = 6;
+const grid = document.querySelector('.grid');
+let n = 5;
 for (let i = 0; i < n; i++) {
     const row = document.createElement('div');
-    row.classList.add('row-container');
+    row.classList.add('row');
     grid.appendChild(row);
     for (let j = 0; j < n; j++) {
         const pixel = document.createElement('div');
