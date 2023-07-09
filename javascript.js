@@ -11,6 +11,7 @@ slider.onchange = () => {
 }
 
 function updateGrid() {
+    resetGrid();
     for (let i = 0; i < n; i++) {
         const grid = document.querySelector('.grid');
         const row = document.createElement('div');
@@ -22,11 +23,23 @@ function updateGrid() {
             row.appendChild(pixel);
         }
     }
+    makeResponsive();
 }
 
-const pixels = document.querySelectorAll('.pixel');
-pixels.forEach((pixel) => {
-    pixel.addEventListener('mouseover', () => {
-        pixel.style.backgroundColor='black';
-    })
-});
+function makeResponsive () {
+    const pixels = document.querySelectorAll('.pixel');
+    pixels.forEach((pixel) => {
+        pixel.addEventListener('mouseover', () => {
+            pixel.style.backgroundColor='black';
+        })
+    });
+}
+
+
+function resetGrid() {
+    const grid = document.querySelector('.grid');
+    grid.innerHTML = '';
+}
+
+const clearButton = document.querySelector('.clear-button');
+clearButton.addEventListener('click', clearGrid);
