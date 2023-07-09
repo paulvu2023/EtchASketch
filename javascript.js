@@ -2,8 +2,8 @@
 let n = 16;
 let color = '#FFC0CB';
 updateGrid();
-var slider = document.getElementById("myRange");
-var slidervalue = document.querySelector('.slider-value');
+let slider = document.getElementById("myRange");
+let slidervalue = document.querySelector('.slider-value');
 slidervalue.textContent = '16 x 16';
 slider.oninput = () => {
     slidervalue.textContent = `${slider.value} x ${slider.value}`;
@@ -11,8 +11,12 @@ slider.oninput = () => {
     updateGrid();
 }
 
+let colorpicker = document.querySelector('#colorpicker');
+colorpicker.oninput = updateColor;
+
 function updateColor() {
     color = document.querySelector('#colorpicker').value;
+    makeResponsive(color);
 }
 
 function updateGrid() {
