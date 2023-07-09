@@ -1,5 +1,6 @@
 // n = slidervalue
 let n = 16;
+let color = '#FFC0CB';
 updateGrid();
 var slider = document.getElementById("myRange");
 var slidervalue = document.querySelector('.slider-value');
@@ -8,6 +9,10 @@ slider.oninput = () => {
     slidervalue.textContent = `${slider.value} x ${slider.value}`;
     n = slider.value;
     updateGrid();
+}
+
+function updateColor() {
+    color = document.querySelector('#colorpicker').value;
 }
 
 function updateGrid() {
@@ -23,14 +28,14 @@ function updateGrid() {
             row.appendChild(pixel);
         }
     }
-    makeResponsive();
+    makeResponsive(color);
 }
 
-function makeResponsive () {
+function makeResponsive (color) {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach((pixel) => {
         pixel.addEventListener('mouseover', () => {
-            pixel.style.backgroundColor='pink';
+            pixel.style.backgroundColor=color;
         })
     });
 }
