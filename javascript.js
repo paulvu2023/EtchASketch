@@ -1,6 +1,7 @@
 // n = slidervalue
 let n = 16;
 let color = '#FFC0CB';
+let colorpicker = document.querySelector('#colorpicker');
 updateGrid();
 let slider = document.getElementById("myRange");
 let slidervalue = document.querySelector('.slider-value');
@@ -10,8 +11,6 @@ slider.oninput = () => {
     n = slider.value;
     updateGrid();
 }
-
-let colorpicker = document.querySelector('#colorpicker');
 colorpicker.oninput = updateColor;
 
 function updateColor() {
