@@ -35,10 +35,13 @@ function makeResponsive () {
     });
 }
 
-
 function resetGrid() {
     const grid = document.querySelector('.grid');
     grid.innerHTML = '';
+}
+
+function clearGrid() {
+    updateGrid();
 }
 
 const clearButton = document.querySelector('.clear-button');
