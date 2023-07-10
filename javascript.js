@@ -6,12 +6,27 @@ updateGrid();
 let slider = document.getElementById("myRange");
 let slidervalue = document.querySelector('.slider-value');
 slidervalue.textContent = '16 x 16';
+
 slider.oninput = () => {
     slidervalue.textContent = `${slider.value} x ${slider.value}`;
     n = slider.value;
     updateGrid();
 }
 colorpicker.oninput = updateColor;
+
+const clearButton = document.querySelector('.clear-button');
+clearButton.addEventListener('click', clearGrid);
+
+check = document.querySelector('#checkbox');
+check.addEventListener('click', checkifchecked);
+
+function checkifchecked() {
+    if (check.checked) {
+        makeRainbow();
+    } else {
+        makeResponsive();
+    }
+}
 
 function updateColor() {
     color = document.querySelector('#colorpicker').value;
@@ -43,6 +58,17 @@ function makeResponsive (color) {
     });
 }
 
+function makeRainbow () {
+    const pixels = document.querySelectorAll('.pixel');
+    pixels.forEach((pixel) => {
+        pixel.addEventListener('mouseover', () => {
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            randomColor = "#" + randomColor;
+            pixel.style.backgroundColor = randomColor;
+        })
+    });
+}
+
 function resetGrid() {
     const grid = document.querySelector('.grid');
     grid.innerHTML = '';
@@ -51,6 +77,3 @@ function resetGrid() {
 function clearGrid() {
     updateGrid();
 }
-
-const clearButton = document.querySelector('.clear-button');
-clearButton.addEventListener('click', clearGrid);
