@@ -24,7 +24,7 @@ function checkifchecked() {
     if (check.checked) {
         makeRainbow();
     } else {
-        makeResponsive();
+        makeResponsive(color);
     }
 }
 
