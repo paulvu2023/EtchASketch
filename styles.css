@@ -52,6 +52,7 @@ body {
   padding-top: 10px;
   display: flex;
   justify-content: center;
+  gap: 5vw;
   align-items: center;
 }
 
